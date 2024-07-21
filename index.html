@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UrbanNestRealty</title>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar">
+        <h1 class="logo">UrbanNestRealty</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#header-content">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <img src="./images/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div id="header-content">
+            <h1>Find Your Dream Home</h1>
+            <div class="line"></div>
+            <h2>Explore the best properties at the best locations</h2>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="line"></div>
+        <p>At <strong>UrbanNestRealty</strong>, we’re more than just a real estate company; we’re a dedicated team committed to turning dreams into reality. Founded in 2024, our journey began with a simple vision: to redefine the real estate experience by blending innovation with personalized service.</p>
+        <p><strong>UrbanNestRealty</strong> started as a small local agency with a handful of properties and a big dream. Over the years, our passion and relentless pursuit of excellence have fueled our growth, transforming us into a leading name in the real estate industry. Our team, comprised of seasoned professionals and enthusiastic newcomers, brings a diverse set of skills and experiences that cater to every aspect of property buying, selling, and leasing.</p>
+        <p>At <strong>UrbanNestRealty</strong>, we’re not just selling properties; we’re helping you find a place where your future unfolds. Join us on this exciting journey, and let’s turn your real estate dreams into reality together.</p>
+    </section>
+
+    <!-- Property -->
+    <section id="properties">
+        <h2>Featured Properties</h2>
+        <div class="line-white"></div>
+        <div class="property-list">
+            <div class="property">
+                <img src="./images/property1.jpg" alt="Property 1">
+                <h3>Luxury Villa</h3>
+                <p>Beautiful villa with amazing view.</p>
+            </div>
+            <div class="property">
+                <img src="./images/property2.jpg" alt="Property 2">
+                <h3>Modern Apartment</h3>
+                <p>Stylish apartment in the city center.</p>
+            </div>
+            <div class="property">
+                <img src="./images/property3.jpg" alt="Property 3">
+                <h3>Cozy House</h3>
+                <p>Comfortable house in a peaceful neighborhood.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="line"></div>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="phone" id="phone" name="phone" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 UrbanNestRealty. All rights reserved.</p>
+    </footer>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>

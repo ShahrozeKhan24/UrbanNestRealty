@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: Oswald;
+}
+
+h3, h4, h5, h6, p {
+    font-family: Roboto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Roboto;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: black;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.active {
+    background-color: black;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.active a {
+    color: white;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/cederic-vandenberghe-21DP3hytVHw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#header-content h1 {
+    font-size: 8vmin;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.line {
+    width: 150px;
+    height: 6px;
+    background-color: black;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+#header-content h2 {
+    font-size: 4vmin;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+    font-family: Roboto;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* About */
+#about {
+    margin-top: 30px;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 8vmin;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#about p {
+    max-width: 80%;
+    margin: 0 auto 1rem auto;
+    line-height: 1.6;
+}
+
+/* Properties */
+#properties {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+#properties h2 {
+    font-size: 8vmin;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.line-white {
+    width: 150px;
+    height: 6px;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.property-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.property {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    transition: transform 0.3s;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.property img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.property:hover img {
+    transform: scale(1.05);
+}
+
+.property:hover {
+    transform: scale(1.02);
+}
+
+/* Contact */
+#contact {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 8vmin;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    text-align: left;
+    font-family: Roboto;
+    font-weight: 600;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    padding: 0.5rem;
+    border: 1px solid #00000088;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #000000af;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #000000;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 850px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        margin: 30px auto;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .property-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    .about p, .contact-form {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-content h1 {
+        font-size: 6vmin;
+    }
+
+    .header-content h2 {
+        font-size: 3vmin;
+    }
+
+    .about h2, .properties h2, .contact h2 {
+        font-size: 6vmin;
+    }
+}
